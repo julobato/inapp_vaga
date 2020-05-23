@@ -17,12 +17,32 @@ a:hover{
 }
 
 .navbar{
-    margin-left: 10%;
-    margin-right: 10%;
     background-color: white;
+    position: fixed;
+    z-index:3;
+    top:0;
+    left:0;
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100%;
+    height: 100px;
+    margin:0;
 }
 
-.navbar-nav, .nav-item{
+.sidepanel {
+    height: 350px; 
+    width: 0; /* change this with JavaScript */
+    position: fixed; 
+    z-index: 6; 
+    right: 0;
+    top: 100px;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    padding-top: 10px; 
+  }
+
+
+.nav-item{
     display: flex;
     margin-left: 55px;
     margin-top: 15px;
@@ -43,6 +63,11 @@ a:hover{
 
 .nav-item a:hover{
     color: #856DD7;
+}
+
+.navbar-collapse{
+    height: 200px;
+    width: 100px;
 }
 
 
@@ -97,7 +122,7 @@ main{
 
 #home{
     margin-left: 10%;
-    margin-top:70px;
+    margin-top:150px;
     height: 800px;
     width:80%;
 }
@@ -344,7 +369,6 @@ select{
     margin-right: 5%;
 }
 
-
 .footer #trapezio{
     display: flex;
     position: relative;
@@ -375,18 +399,19 @@ select{
 }
 
 
-@media (max-width:1470px) and (min-width:980px){
-    .navbar-nav, .nav-item{
-        margin-left: 20px;
+@media(max-width:1700px){
+    #home img{
+        top:100px;
     }
 }
+
 
 @media(max-width:1580px){
     .navbar-collapse form .form-control{
         width: 150px;
     }
     .navbar{
-        margin-left: 3%;
+        padding-left: 3%;
         margin-right: 3%;
     }
     #home{
@@ -418,6 +443,12 @@ select{
     }
 }
 
+@media (max-width:1470px) and (min-width:980px){
+    .navbar-nav, .nav-item{
+        margin-left: 20px;
+    }
+}
+
 @media (max-width: 1350px){
     .row{
         margin-left:0;
@@ -443,12 +474,6 @@ select{
 
     #info .texto{
         top: 2750px;
-    }
-}
-
-@media(max-width:1700px){
-    #home img{
-        top:100px;
     }
 }
 
@@ -481,8 +506,119 @@ select{
     }
 }
 
-@media(max-width:1000px){
-    #home img{
-        top:150px;
+
+@media (max-width:980px) and (min-width:425px){
+    .nav-item .other-page img, .current-page img{
+        display: none;
+    }
+    #mySidepanel form{
+        margin-left:30px;
+    }
+    #mySidepanel .btn-grad{
+        margin-left: 30px;
+    }
+    #info .texto{
+        display: block;
+    }
+    #contact .form{
+        top: 1750px;
+        left:2%;
+        width: 96%;
+        height: 570px;
+    }
+    #home{
+        margin-top: 250px;
+    }
+}
+
+@media only screen and (max-width:468px){
+    body{
+        font-size: 40px;
+    }
+    main{
+        height: 3000px;
+    }
+    .sidepanel{
+        height: 100%;
+    }
+    .navbar-collapse form .form-control{
+        width: 150px;
+    }
+    .navbar{
+        font-size: 20px;
+        padding-left: 3%;
+        margin-right: 3%;
+    }
+
+    .nav-item .other-page img, .current-page img{
+        display: none;
+    }
+    #mySidepanel form{
+        width: 80%;
+        margin-left:10%;
+    }
+    #mySidepanel .btn-grad{
+        margin-left: 10%;
+    }
+    #info .texto{
+        display: block;
+    }
+
+    #home{
+        height: 300px;
+        margin-left: 3%;
+        margin-top: 400px;
+        width: 94%;
+    }
+    #home .text, .buttons{
+        width: 94%;
+    }
+    .buttons{
+        margin-top: 100px;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+    }
+
+    .btn-home, .btn-home2{
+        margin-right: 2px;
+        width: 130px;
+    }
+    
+    #about, #text{
+        display: flex;
+        flex-direction: column;
+        height: 600px;
+        width: 86%;
+        margin-left: 7%;
+    }
+    #about .texto, #about .imagem, #text .texto, #text .imagem{
+        width:100%;
+    }
+    #text{
+        justify-content: space-around;
+        flex-direction: column-reverse;
+    }
+
+    #contact .texto{
+        top: 1950px;
+    }
+    #contact .form{
+        top: 2100px;
+        left:2%;
+        width: 96%;
+        height: 570px;
+    }
+    #info .logo{
+        top: 2810px;
+        left: 32%;
+        width: 150px;
+    }
+    
+    #info .texto{
+        top: 2900px;
+    }
+    .row .icones img{
+        width: 47px;
     }
 }

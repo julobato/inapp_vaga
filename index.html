@@ -2,6 +2,7 @@
 <html lang="pt-br">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./css/style.css" type="text/css">
@@ -12,15 +13,12 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg navbar-light">
-                <a class="navbar-brand" href="#"><img src="./img/logo.svg" width="150px"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <a class="navbar-brand" href="#"><img src="./img/logo.svg"></a>
+                <div class="collapse navbar-collapse" id="mySidebar">
                     <ul class="navbar-nav mr-auto">
-                        <div class="nav-item">
+                        <li class="nav-item">
                             <a class="current-page" href="#">Home <br><img src="./img/bullet.svg" width="10px"></a>
-                        </div>
+                        </li>
                         <li class="nav-item">
                             <a class="other-page" href="#about">About <br><img src="./img/bullet.svg" width="10px"></a>
                         </li>
@@ -42,6 +40,34 @@
                     </form>
                     <a class="btn btn-grad" href="#info" role="button">Contact Us</a>
                 </div>
+                <div id="mySidepanel" class="sidepanel">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="current-page" href="#">Home <br><img src="./img/bullet.svg" width="10px"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="other-page" href="#about">About <br><img src="./img/bullet.svg" width="10px"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="other-page" href="#">Portfolio <br><img src="./img/bullet.svg" width="10px"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="other-page" href="#">Product <br><img src="./img/bullet.svg" width="10px"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="other-page" href="#">Career <br><img src="./img/bullet.svg" width="10px"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="other-page" href="#">Blog <br><img src="./img/bullet.svg" width="10px"></a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0 nav-item">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search Here">
+                    </form>
+                    <a class="btn btn-grad" href="#info" role="button">Contact Us</a>
+                </div>
+                <button id="botao" class="openbtn navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+            </div>
               </nav>
         </header>
         <main>
@@ -142,13 +168,13 @@
                 </div>
                 <div class="container-fluid texto">
                     <div class="row">
-                        <div class="col-lg-3 col-md-3 col-left">
+                        <div class="col-lg-3 col-sm-4 col-left">
                             <h6>Contact us</h6>
                             <p><a href="#"><img src="./img/icone1.svg" width="15px"> +(290) 520-7927</a></p>
                             <p><a href="#"><img src="./img/icone1.svg" width="15px"> Dhaka Bangladesh</a></p>
                             <p><a href="#"><img src="./img/contact.svg" width="25px"> themefisher.com</a></p>
                         </div>
-                        <div class="col-2">
+                        <div class="col-lg-2 col-sm-3">
                             <h6>Our Company</h6>
                             <p><a href="#">About</a></p>
                             <p><a href="#">Product</a></p>
@@ -156,7 +182,7 @@
                             <p><a href="#">Career</a></p>
                             <p><a href="#">Blog</a></p>
                         </div>
-                        <div class="col-2">
+                        <div class="col-lg-2 col-sm-3">
                             <h6>Contact us</h6>
                             <p><a href="#">Facebook</a></p>
                             <p><a href="#">Linkedin</a></p>
@@ -164,7 +190,7 @@
                             <p><a href="#">Vimeo</a></p>
                             <p><a href="#">Skype</a></p>
                         </div>
-                        <div class="col-lg-3 col-md-4">
+                        <div class="col-lg-3 col-sm-6 icones">
                             <h6>Address</h6>
                             <p><a href="#">Internet Systems Consortium, Inc. 950</a></p>
                             <h6>Follow us</h6>
@@ -189,5 +215,31 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script>
+            var x = window.matchMedia("(max-width: 980px) and (min-width:468px)");
+            var y = window.matchMedia("(max-width: 468px)");
+            $(document).on('click', function(e) {
+                if (e.target.closest('#botao')){
+                    if (x.matches) {
+                        console.log("yay")
+                        if (document.getElementById('mySidepanel').style.width == "400px"){
+                            document.getElementById('mySidepanel').style.width = "0";
+                        }
+                        else{
+                            document.getElementById('mySidepanel').style.width = "400px";
+                        }
+                    }
+                    if (y.matches) {
+                        console.log("Uhu")
+                        if (document.getElementById('mySidepanel').style.width == "100%"){
+                            document.getElementById('mySidepanel').style.width = "0";
+                        }
+                        else{
+                            document.getElementById('mySidepanel').style.width = "100%";
+                        }
+                    }
+                }
+            })
+        </script>
     </body>
 </html>
