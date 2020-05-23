@@ -374,33 +374,110 @@ select{
     width: 18%;
 }
 
-@media (max-width: 1586px){
-    .navbar-collapse form{
-        display: none;
-    }
-}
 
-@media (max-width:1270px){
+@media (max-width:1470px) and (min-width:980px){
     .navbar-nav, .nav-item{
         margin-left: 20px;
     }
 }
 
-@media(max-width:1150px){
+@media(max-width:1580px){
+    .navbar-collapse form .form-control{
+        width: 150px;
+    }
+    .navbar{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+    #home{
+        height: 700px;
+        margin-left: 3%;
+        width: 94%;
+    }
+    #home .text, .buttons{
+        width: 94%;
+    }
+    #about, #text{
+        height: 600px;
+        width: 86%;
+        margin-left: 7%;
+    }
+    #contact .texto{
+        top: 2100px;
+    }
+    #contact .form{
+        top:2240px;
+    }
+
+    #info .logo{
+        top: 3020px;
+    }
+
+    #info .texto{
+        top: 3120px;
+    }
+}
+
+@media (max-width: 1350px){
     .row{
         margin-left:0;
     }
-    .col-2{
-        margin-right: 30px;
+    #home{
+        height: 660px;
     }
-    .col-3 p a{
-        margin-right: 0;
+    #about, #text{
+        height: 420px;
+        width: 86%;
+        margin-left: 7%;
+    }
+    #contact .texto{
+        top: 1780px;
+    }
+    #contact .form{
+        top:1940px;
+    }
+
+    #info .logo{
+        top: 2620px;
+    }
+
+    #info .texto{
+        top: 2750px;
     }
 }
 
 @media(max-width:1700px){
     #home img{
         top:100px;
+    }
+}
+
+@media(max-width:1150px){
+    .col-2{
+        margin-right: 30px;
+    }
+    .col-3 p a{
+        margin-right: 0;
+    }
+    main{
+        height: 2700px;
+    }
+    #home{
+        height: 550px;
+    }
+    #contact .texto{
+        top: 1630px;
+    }
+    #contact .form{
+        top:1790px;
+    }
+
+    #info .logo{
+        top: 2500px;
+    }
+
+    #info .texto{
+        top: 2600px;
     }
 }
 
